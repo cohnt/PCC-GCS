@@ -125,6 +125,7 @@ z = Variable("z")
 _domain = HPolyhedron.MakeBox([-0.1, -0.5,-0.5], [0.5, 0.5, 0.5])
 _expression_parameterization=np.array([x,y/2, y, y, y, y, y, z/2, z, z, z, z])
 _variables=np.array([x, y, z])
+iris_options.SetParameterizationFromExpression(_expression_parameterization.reshape(-1,1), _variables.reshape(-1,1))
 
 seeds=[]
 
