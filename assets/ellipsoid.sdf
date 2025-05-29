@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<sdf version="1.7">
+  <model name="ellipsoid_model">
+    <link name="ellipsoid_base">
+      <visual name="visual">
+        <pose>0 0 0 0 0 0</pose>
+        <geometry>
+            <ellipsoid>
+              <radii>0.01 0.005 0.02</radii>
+            </ellipsoid>
+        </geometry>
+      </visual>
+      <collision name="ellipsoid_colli">
+        <pose>0 0 0 0 0 0</pose>
+        <geometry>
+            <ellipsoid>
+              <radii>0.02 0.01 0.005</radii>
+            </ellipsoid>
+        </geometry>
+      </collision>
+    </link>
+    <frame name="ellipsoid_top">
+      <pose relative_to="ellipsoid_base">0 0 0 0 0 0</pose>
+    </frame>
+  </model>
+</sdf>

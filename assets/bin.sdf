@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<sdf version="1.7">
+  <model name="bin_model">
+    <link name="bin_base">
+      <visual name="visual">
+        <pose>0 0 0 0 0 0</pose>
+        <geometry>
+            <cylinder>
+              <radius>0.01</radius>
+              <length>0.04</length>
+            </cylinder>
+        </geometry>
+      </visual>
+      <collision name="bin_colli">
+        <pose>0 0 0 0 0 0</pose>
+        <geometry>
+            <cylinder>
+              <radius>0.01</radius>
+              <length>0.04</length>
+            </cylinder>
+        </geometry>
+      </collision>
+    </link>
+    <frame name="bin_top">
+      <pose relative_to="bin_base">0.0 0 0.01 0 0 0</pose>
+    </frame>
+  </model>
+</sdf>

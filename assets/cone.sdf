@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<sdf version="1.7">
+  <model name="cone_model">
+    <link name="cone_base">
+      <visual name="visual">
+        <pose>0 0 0 0 0 0</pose>
+        <geometry>
+            <cone>
+              <radius>0.01</radius>
+              <length>0.04</length>
+            </cone>
+        </geometry>
+      </visual>
+      <collision name="cone_colli">
+        <pose>0 0 0 0 0 0</pose>
+        <geometry>
+            <cone>
+              <radius>0.01</radius>
+              <length>0.04</length>
+            </cone>
+        </geometry>
+      </collision>
+    </link>
+    <frame name="cone_top">
+      <pose relative_to="cone_base">0.0 0 0.01 0 0 0</pose>
+    </frame>
+  </model>
+</sdf>

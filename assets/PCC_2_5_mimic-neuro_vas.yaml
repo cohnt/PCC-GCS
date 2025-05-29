@@ -1,0 +1,1004 @@
+# Model directive for planar PCC with simple collision
+
+directives:
+
+# Add PCC
+- add_model:
+    name: PCC
+    file: package://PCC-IRIS/PCC_2_5_mimic.urdf
+
+- add_weld:
+    parent: world
+    child: PCC::base_link
+
+- add_frame:
+    name: target_frame
+    X_PF:
+      base_frame: world
+      translation: [0.0, 0.0, 0.2]
+      rotation: !Rpy { deg: [0.0, 0.0, 0.0] }
+
+- add_frame:
+    name: ee_frame
+    X_PF:
+      base_frame: PCC::s2l5
+      translation: [0.0, 0.0, 0.0001]
+      rotation: !Rpy { deg: [0.0, 0.0, 0.0] }
+
+# Add target
+- add_model:
+    name: target
+    file: package://PCC-IRIS/target.sdf
+
+- add_frame:
+    name: target_attach
+    X_PF:
+      base_frame: world
+      translation: [0.0, 0.032, 0.35]
+      rotation: !Rpy { deg: [0.0, 0.0, 0.0] }
+- add_weld:
+    parent: target_attach
+    child: target::target_base
+
+
+# Add vascular parts
+- add_model:
+    name: vascular_partexport000
+    file: package://PCC-IRIS/semi_vas-collections/vascular_partexport000.sdf
+
+- add_frame:
+    name: vascular_part000_attach
+    X_PF:
+      base_frame: world
+      translation: [-0.01, -0.02, 0.0]
+      rotation: !Rpy { deg: [0.0, 0.0, 0.0] }
+
+- add_weld:
+    parent: vascular_part000_attach
+    child: vascular_partexport000::vascular_partexport000_body
+
+- add_model:
+    name: vascular_partexport001
+    file: package://PCC-IRIS/semi_vas-collections/vascular_partexport001.sdf
+
+- add_frame:
+    name: vascular_part001_attach
+    X_PF:
+      base_frame: world
+      translation: [-0.01, -0.02, 0.0]
+      rotation: !Rpy { deg: [0.0, 0.0, 0.0] }
+
+- add_weld:
+    parent: vascular_part001_attach
+    child: vascular_partexport001::vascular_partexport001_body
+
+- add_model:
+    name: vascular_partexport002
+    file: package://PCC-IRIS/semi_vas-collections/vascular_partexport002.sdf
+
+- add_frame:
+    name: vascular_part002_attach
+    X_PF:
+      base_frame: world
+      translation: [-0.01, -0.02, 0.0]
+      rotation: !Rpy { deg: [0.0, 0.0, 0.0] }
+
+- add_weld:
+    parent: vascular_part002_attach
+    child: vascular_partexport002::vascular_partexport002_body
+
+- add_model:
+    name: vascular_partexport003
+    file: package://PCC-IRIS/semi_vas-collections/vascular_partexport003.sdf
+
+- add_frame:
+    name: vascular_part003_attach
+    X_PF:
+      base_frame: world
+      translation: [-0.01, -0.02, 0.0]
+      rotation: !Rpy { deg: [0.0, 0.0, 0.0] }
+
+- add_weld:
+    parent: vascular_part003_attach
+    child: vascular_partexport003::vascular_partexport003_body
+
+- add_model:
+    name: vascular_partexport004
+    file: package://PCC-IRIS/semi_vas-collections/vascular_partexport004.sdf
+
+- add_frame:
+    name: vascular_part004_attach
+    X_PF:
+      base_frame: world
+      translation: [-0.01, -0.02, 0.0]
+      rotation: !Rpy { deg: [0.0, 0.0, 0.0] }
+
+- add_weld:
+    parent: vascular_part004_attach
+    child: vascular_partexport004::vascular_partexport004_body
+
+- add_model:
+    name: vascular_partexport005
+    file: package://PCC-IRIS/semi_vas-collections/vascular_partexport005.sdf
+
+- add_frame:
+    name: vascular_part005_attach
+    X_PF:
+      base_frame: world
+      translation: [-0.01, -0.02, 0.0]
+      rotation: !Rpy { deg: [0.0, 0.0, 0.0] }
+
+- add_weld:
+    parent: vascular_part005_attach
+    child: vascular_partexport005::vascular_partexport005_body
+
+- add_model:
+    name: vascular_partexport006
+    file: package://PCC-IRIS/semi_vas-collections/vascular_partexport006.sdf
+
+- add_frame:
+    name: vascular_part006_attach
+    X_PF:
+      base_frame: world
+      translation: [-0.01, -0.02, 0.0]
+      rotation: !Rpy { deg: [0.0, 0.0, 0.0] }
+
+- add_weld:
+    parent: vascular_part006_attach
+    child: vascular_partexport006::vascular_partexport006_body
+
+- add_model:
+    name: vascular_partexport007
+    file: package://PCC-IRIS/semi_vas-collections/vascular_partexport007.sdf
+
+- add_frame:
+    name: vascular_part007_attach
+    X_PF:
+      base_frame: world
+      translation: [-0.01, -0.02, 0.0]
+      rotation: !Rpy { deg: [0.0, 0.0, 0.0] }
+
+- add_weld:
+    parent: vascular_part007_attach
+    child: vascular_partexport007::vascular_partexport007_body
+
+- add_model:
+    name: vascular_partexport008
+    file: package://PCC-IRIS/semi_vas-collections/vascular_partexport008.sdf
+
+- add_frame:
+    name: vascular_part008_attach
+    X_PF:
+      base_frame: world
+      translation: [-0.01, -0.02, 0.0]
+      rotation: !Rpy { deg: [0.0, 0.0, 0.0] }
+
+- add_weld:
+    parent: vascular_part008_attach
+    child: vascular_partexport008::vascular_partexport008_body
+
+- add_model:
+    name: vascular_partexport009
+    file: package://PCC-IRIS/semi_vas-collections/vascular_partexport009.sdf
+
+- add_frame:
+    name: vascular_part009_attach
+    X_PF:
+      base_frame: world
+      translation: [-0.01, -0.02, 0.0]
+      rotation: !Rpy { deg: [0.0, 0.0, 0.0] }
+
+- add_weld:
+    parent: vascular_part009_attach
+    child: vascular_partexport009::vascular_partexport009_body
+
+- add_model:
+    name: vascular_partexport010
+    file: package://PCC-IRIS/semi_vas-collections/vascular_partexport010.sdf
+
+- add_frame:
+    name: vascular_part010_attach
+    X_PF:
+      base_frame: world
+      translation: [-0.01, -0.02, 0.0]
+      rotation: !Rpy { deg: [0.0, 0.0, 0.0] }
+
+- add_weld:
+    parent: vascular_part010_attach
+    child: vascular_partexport010::vascular_partexport010_body
+
+- add_model:
+    name: vascular_partexport011
+    file: package://PCC-IRIS/semi_vas-collections/vascular_partexport011.sdf
+
+- add_frame:
+    name: vascular_part011_attach
+    X_PF:
+      base_frame: world
+      translation: [-0.01, -0.02, 0.0]
+      rotation: !Rpy { deg: [0.0, 0.0, 0.0] }
+
+- add_weld:
+    parent: vascular_part011_attach
+    child: vascular_partexport011::vascular_partexport011_body
+
+- add_model:
+    name: vascular_partexport012
+    file: package://PCC-IRIS/semi_vas-collections/vascular_partexport012.sdf
+
+- add_frame:
+    name: vascular_part012_attach
+    X_PF:
+      base_frame: world
+      translation: [-0.01, -0.02, 0.0]
+      rotation: !Rpy { deg: [0.0, 0.0, 0.0] }
+
+- add_weld:
+    parent: vascular_part012_attach
+    child: vascular_partexport012::vascular_partexport012_body
+
+- add_model:
+    name: vascular_partexport013
+    file: package://PCC-IRIS/semi_vas-collections/vascular_partexport013.sdf
+
+- add_frame:
+    name: vascular_part013_attach
+    X_PF:
+      base_frame: world
+      translation: [-0.01, -0.02, 0.0]
+      rotation: !Rpy { deg: [0.0, 0.0, 0.0] }
+
+- add_weld:
+    parent: vascular_part013_attach
+    child: vascular_partexport013::vascular_partexport013_body
+
+- add_model:
+    name: vascular_partexport014
+    file: package://PCC-IRIS/semi_vas-collections/vascular_partexport014.sdf
+
+- add_frame:
+    name: vascular_part014_attach
+    X_PF:
+      base_frame: world
+      translation: [-0.01, -0.02, 0.0]
+      rotation: !Rpy { deg: [0.0, 0.0, 0.0] }
+
+- add_weld:
+    parent: vascular_part014_attach
+    child: vascular_partexport014::vascular_partexport014_body
+
+- add_model:
+    name: vascular_partexport015
+    file: package://PCC-IRIS/semi_vas-collections/vascular_partexport015.sdf
+
+- add_frame:
+    name: vascular_part015_attach
+    X_PF:
+      base_frame: world
+      translation: [-0.01, -0.02, 0.0]
+      rotation: !Rpy { deg: [0.0, 0.0, 0.0] }
+
+- add_weld:
+    parent: vascular_part015_attach
+    child: vascular_partexport015::vascular_partexport015_body
+
+- add_model:
+    name: vascular_partexport016
+    file: package://PCC-IRIS/semi_vas-collections/vascular_partexport016.sdf
+
+- add_frame:
+    name: vascular_part016_attach
+    X_PF:
+      base_frame: world
+      translation: [-0.01, -0.02, 0.0]
+      rotation: !Rpy { deg: [0.0, 0.0, 0.0] }
+
+- add_weld:
+    parent: vascular_part016_attach
+    child: vascular_partexport016::vascular_partexport016_body
+
+- add_model:
+    name: vascular_partexport017
+    file: package://PCC-IRIS/semi_vas-collections/vascular_partexport017.sdf
+
+- add_frame:
+    name: vascular_part017_attach
+    X_PF:
+      base_frame: world
+      translation: [-0.01, -0.02, 0.0]
+      rotation: !Rpy { deg: [0.0, 0.0, 0.0] }
+
+- add_weld:
+    parent: vascular_part017_attach
+    child: vascular_partexport017::vascular_partexport017_body
+
+- add_model:
+    name: vascular_partexport018
+    file: package://PCC-IRIS/semi_vas-collections/vascular_partexport018.sdf
+
+- add_frame:
+    name: vascular_part018_attach
+    X_PF:
+      base_frame: world
+      translation: [-0.01, -0.02, 0.0]
+      rotation: !Rpy { deg: [0.0, 0.0, 0.0] }
+
+- add_weld:
+    parent: vascular_part018_attach
+    child: vascular_partexport018::vascular_partexport018_body
+
+- add_model:
+    name: vascular_partexport019
+    file: package://PCC-IRIS/semi_vas-collections/vascular_partexport019.sdf
+
+- add_frame:
+    name: vascular_part019_attach
+    X_PF:
+      base_frame: world
+      translation: [-0.01, -0.02, 0.0]
+      rotation: !Rpy { deg: [0.0, 0.0, 0.0] }
+
+- add_weld:
+    parent: vascular_part019_attach
+    child: vascular_partexport019::vascular_partexport019_body
+
+- add_model:
+    name: vascular_partexport020
+    file: package://PCC-IRIS/semi_vas-collections/vascular_partexport020.sdf
+
+- add_frame:
+    name: vascular_part020_attach
+    X_PF:
+      base_frame: world
+      translation: [-0.01, -0.02, 0.0]
+      rotation: !Rpy { deg: [0.0, 0.0, 0.0] }
+
+- add_weld:
+    parent: vascular_part020_attach
+    child: vascular_partexport020::vascular_partexport020_body
+
+- add_model:
+    name: vascular_partexport021
+    file: package://PCC-IRIS/semi_vas-collections/vascular_partexport021.sdf
+
+- add_frame:
+    name: vascular_part021_attach
+    X_PF:
+      base_frame: world
+      translation: [-0.01, -0.02, 0.0]
+      rotation: !Rpy { deg: [0.0, 0.0, 0.0] }
+
+- add_weld:
+    parent: vascular_part021_attach
+    child: vascular_partexport021::vascular_partexport021_body
+
+- add_model:
+    name: vascular_partexport022
+    file: package://PCC-IRIS/semi_vas-collections/vascular_partexport022.sdf
+
+- add_frame:
+    name: vascular_part022_attach
+    X_PF:
+      base_frame: world
+      translation: [-0.01, -0.02, 0.0]
+      rotation: !Rpy { deg: [0.0, 0.0, 0.0] }
+
+- add_weld:
+    parent: vascular_part022_attach
+    child: vascular_partexport022::vascular_partexport022_body
+
+- add_model:
+    name: vascular_partexport023
+    file: package://PCC-IRIS/semi_vas-collections/vascular_partexport023.sdf
+
+- add_frame:
+    name: vascular_part023_attach
+    X_PF:
+      base_frame: world
+      translation: [-0.01, -0.02, 0.0]
+      rotation: !Rpy { deg: [0.0, 0.0, 0.0] }
+
+- add_weld:
+    parent: vascular_part023_attach
+    child: vascular_partexport023::vascular_partexport023_body
+
+- add_model:
+    name: vascular_partexport024
+    file: package://PCC-IRIS/semi_vas-collections/vascular_partexport024.sdf
+
+- add_frame:
+    name: vascular_part024_attach
+    X_PF:
+      base_frame: world
+      translation: [-0.01, -0.02, 0.0]
+      rotation: !Rpy { deg: [0.0, 0.0, 0.0] }
+
+- add_weld:
+    parent: vascular_part024_attach
+    child: vascular_partexport024::vascular_partexport024_body
+
+- add_model:
+    name: vascular_partexport025
+    file: package://PCC-IRIS/semi_vas-collections/vascular_partexport025.sdf
+
+- add_frame:
+    name: vascular_part025_attach
+    X_PF:
+      base_frame: world
+      translation: [-0.01, -0.02, 0.0]
+      rotation: !Rpy { deg: [0.0, 0.0, 0.0] }
+
+- add_weld:
+    parent: vascular_part025_attach
+    child: vascular_partexport025::vascular_partexport025_body
+
+- add_model:
+    name: vascular_partexport026
+    file: package://PCC-IRIS/semi_vas-collections/vascular_partexport026.sdf
+
+- add_frame:
+    name: vascular_part026_attach
+    X_PF:
+      base_frame: world
+      translation: [-0.01, -0.02, 0.0]
+      rotation: !Rpy { deg: [0.0, 0.0, 0.0] }
+
+- add_weld:
+    parent: vascular_part026_attach
+    child: vascular_partexport026::vascular_partexport026_body
+
+- add_model:
+    name: vascular_partexport027
+    file: package://PCC-IRIS/semi_vas-collections/vascular_partexport027.sdf
+
+- add_frame:
+    name: vascular_part027_attach
+    X_PF:
+      base_frame: world
+      translation: [-0.01, -0.02, 0.0]
+      rotation: !Rpy { deg: [0.0, 0.0, 0.0] }
+
+- add_weld:
+    parent: vascular_part027_attach
+    child: vascular_partexport027::vascular_partexport027_body
+
+- add_model:
+    name: vascular_partexport028
+    file: package://PCC-IRIS/semi_vas-collections/vascular_partexport028.sdf
+
+- add_frame:
+    name: vascular_part028_attach
+    X_PF:
+      base_frame: world
+      translation: [-0.01, -0.02, 0.0]
+      rotation: !Rpy { deg: [0.0, 0.0, 0.0] }
+
+- add_weld:
+    parent: vascular_part028_attach
+    child: vascular_partexport028::vascular_partexport028_body
+
+- add_model:
+    name: vascular_partexport029
+    file: package://PCC-IRIS/semi_vas-collections/vascular_partexport029.sdf
+
+- add_frame:
+    name: vascular_part029_attach
+    X_PF:
+      base_frame: world
+      translation: [-0.01, -0.02, 0.0]
+      rotation: !Rpy { deg: [0.0, 0.0, 0.0] }
+
+- add_weld:
+    parent: vascular_part029_attach
+    child: vascular_partexport029::vascular_partexport029_body
+
+- add_model:
+    name: vascular_partexport030
+    file: package://PCC-IRIS/semi_vas-collections/vascular_partexport030.sdf
+
+- add_frame:
+    name: vascular_part030_attach
+    X_PF:
+      base_frame: world
+      translation: [-0.01, -0.02, 0.0]
+      rotation: !Rpy { deg: [0.0, 0.0, 0.0] }
+
+- add_weld:
+    parent: vascular_part030_attach
+    child: vascular_partexport030::vascular_partexport030_body
+
+- add_model:
+    name: vascular_partexport031
+    file: package://PCC-IRIS/semi_vas-collections/vascular_partexport031.sdf
+
+- add_frame:
+    name: vascular_part031_attach
+    X_PF:
+      base_frame: world
+      translation: [-0.01, -0.02, 0.0]
+      rotation: !Rpy { deg: [0.0, 0.0, 0.0] }
+
+- add_weld:
+    parent: vascular_part031_attach
+    child: vascular_partexport031::vascular_partexport031_body
+
+- add_model:
+    name: vascular_partexport032
+    file: package://PCC-IRIS/semi_vas-collections/vascular_partexport032.sdf
+
+- add_frame:
+    name: vascular_part032_attach
+    X_PF:
+      base_frame: world
+      translation: [-0.01, -0.02, 0.0]
+      rotation: !Rpy { deg: [0.0, 0.0, 0.0] }
+
+- add_weld:
+    parent: vascular_part032_attach
+    child: vascular_partexport032::vascular_partexport032_body
+
+- add_model:
+    name: vascular_partexport033
+    file: package://PCC-IRIS/semi_vas-collections/vascular_partexport033.sdf
+
+- add_frame:
+    name: vascular_part033_attach
+    X_PF:
+      base_frame: world
+      translation: [-0.01, -0.02, 0.0]
+      rotation: !Rpy { deg: [0.0, 0.0, 0.0] }
+
+- add_weld:
+    parent: vascular_part033_attach
+    child: vascular_partexport033::vascular_partexport033_body
+
+- add_model:
+    name: vascular_partexport034
+    file: package://PCC-IRIS/semi_vas-collections/vascular_partexport034.sdf
+
+- add_frame:
+    name: vascular_part034_attach
+    X_PF:
+      base_frame: world
+      translation: [-0.01, -0.02, 0.0]
+      rotation: !Rpy { deg: [0.0, 0.0, 0.0] }
+
+- add_weld:
+    parent: vascular_part034_attach
+    child: vascular_partexport034::vascular_partexport034_body
+
+- add_model:
+    name: vascular_partexport035
+    file: package://PCC-IRIS/semi_vas-collections/vascular_partexport035.sdf
+
+- add_frame:
+    name: vascular_part035_attach
+    X_PF:
+      base_frame: world
+      translation: [-0.01, -0.02, 0.0]
+      rotation: !Rpy { deg: [0.0, 0.0, 0.0] }
+
+- add_weld:
+    parent: vascular_part035_attach
+    child: vascular_partexport035::vascular_partexport035_body
+
+- add_model:
+    name: vascular_partexport036
+    file: package://PCC-IRIS/semi_vas-collections/vascular_partexport036.sdf
+
+- add_frame:
+    name: vascular_part036_attach
+    X_PF:
+      base_frame: world
+      translation: [-0.01, -0.02, 0.0]
+      rotation: !Rpy { deg: [0.0, 0.0, 0.0] }
+
+- add_weld:
+    parent: vascular_part036_attach
+    child: vascular_partexport036::vascular_partexport036_body
+
+- add_model:
+    name: vascular_partexport037
+    file: package://PCC-IRIS/semi_vas-collections/vascular_partexport037.sdf
+
+- add_frame:
+    name: vascular_part037_attach
+    X_PF:
+      base_frame: world
+      translation: [-0.01, -0.02, 0.0]
+      rotation: !Rpy { deg: [0.0, 0.0, 0.0] }
+
+- add_weld:
+    parent: vascular_part037_attach
+    child: vascular_partexport037::vascular_partexport037_body
+
+- add_model:
+    name: vascular_partexport038
+    file: package://PCC-IRIS/semi_vas-collections/vascular_partexport038.sdf
+
+- add_frame:
+    name: vascular_part038_attach
+    X_PF:
+      base_frame: world
+      translation: [-0.01, -0.02, 0.0]
+      rotation: !Rpy { deg: [0.0, 0.0, 0.0] }
+
+- add_weld:
+    parent: vascular_part038_attach
+    child: vascular_partexport038::vascular_partexport038_body
+
+- add_model:
+    name: vascular_partexport039
+    file: package://PCC-IRIS/semi_vas-collections/vascular_partexport039.sdf
+
+- add_frame:
+    name: vascular_part039_attach
+    X_PF:
+      base_frame: world
+      translation: [-0.01, -0.02, 0.0]
+      rotation: !Rpy { deg: [0.0, 0.0, 0.0] }
+
+- add_weld:
+    parent: vascular_part039_attach
+    child: vascular_partexport039::vascular_partexport039_body
+
+- add_model:
+    name: vascular_partexport040
+    file: package://PCC-IRIS/semi_vas-collections/vascular_partexport040.sdf
+
+- add_frame:
+    name: vascular_part040_attach
+    X_PF:
+      base_frame: world
+      translation: [-0.01, -0.02, 0.0]
+      rotation: !Rpy { deg: [0.0, 0.0, 0.0] }
+
+- add_weld:
+    parent: vascular_part040_attach
+    child: vascular_partexport040::vascular_partexport040_body
+
+- add_model:
+    name: vascular_partexport041
+    file: package://PCC-IRIS/semi_vas-collections/vascular_partexport041.sdf
+
+- add_frame:
+    name: vascular_part041_attach
+    X_PF:
+      base_frame: world
+      translation: [-0.01, -0.02, 0.0]
+      rotation: !Rpy { deg: [0.0, 0.0, 0.0] }
+
+- add_weld:
+    parent: vascular_part041_attach
+    child: vascular_partexport041::vascular_partexport041_body
+
+- add_model:
+    name: vascular_partexport042
+    file: package://PCC-IRIS/semi_vas-collections/vascular_partexport042.sdf
+
+- add_frame:
+    name: vascular_part042_attach
+    X_PF:
+      base_frame: world
+      translation: [-0.01, -0.02, 0.0]
+      rotation: !Rpy { deg: [0.0, 0.0, 0.0] }
+
+- add_weld:
+    parent: vascular_part042_attach
+    child: vascular_partexport042::vascular_partexport042_body
+
+- add_model:
+    name: vascular_partexport043
+    file: package://PCC-IRIS/semi_vas-collections/vascular_partexport043.sdf
+
+- add_frame:
+    name: vascular_part043_attach
+    X_PF:
+      base_frame: world
+      translation: [-0.01, -0.02, 0.0]
+      rotation: !Rpy { deg: [0.0, 0.0, 0.0] }
+
+- add_weld:
+    parent: vascular_part043_attach
+    child: vascular_partexport043::vascular_partexport043_body
+
+- add_model:
+    name: vascular_partexport044
+    file: package://PCC-IRIS/semi_vas-collections/vascular_partexport044.sdf
+
+- add_frame:
+    name: vascular_part044_attach
+    X_PF:
+      base_frame: world
+      translation: [-0.01, -0.02, 0.0]
+      rotation: !Rpy { deg: [0.0, 0.0, 0.0] }
+
+- add_weld:
+    parent: vascular_part044_attach
+    child: vascular_partexport044::vascular_partexport044_body
+
+- add_model:
+    name: vascular_partexport045
+    file: package://PCC-IRIS/semi_vas-collections/vascular_partexport045.sdf
+
+- add_frame:
+    name: vascular_part045_attach
+    X_PF:
+      base_frame: world
+      translation: [-0.01, -0.02, 0.0]
+      rotation: !Rpy { deg: [0.0, 0.0, 0.0] }
+
+- add_weld:
+    parent: vascular_part045_attach
+    child: vascular_partexport045::vascular_partexport045_body
+
+- add_model:
+    name: vascular_partexport046
+    file: package://PCC-IRIS/semi_vas-collections/vascular_partexport046.sdf
+
+- add_frame:
+    name: vascular_part046_attach
+    X_PF:
+      base_frame: world
+      translation: [-0.01, -0.02, 0.0]
+      rotation: !Rpy { deg: [0.0, 0.0, 0.0] }
+
+- add_weld:
+    parent: vascular_part046_attach
+    child: vascular_partexport046::vascular_partexport046_body
+
+- add_model:
+    name: vascular_partexport047
+    file: package://PCC-IRIS/semi_vas-collections/vascular_partexport047.sdf
+
+- add_frame:
+    name: vascular_part047_attach
+    X_PF:
+      base_frame: world
+      translation: [-0.01, -0.02, 0.0]
+      rotation: !Rpy { deg: [0.0, 0.0, 0.0] }
+
+- add_weld:
+    parent: vascular_part047_attach
+    child: vascular_partexport047::vascular_partexport047_body
+
+- add_model:
+    name: vascular_partexport048
+    file: package://PCC-IRIS/semi_vas-collections/vascular_partexport048.sdf
+
+- add_frame:
+    name: vascular_part048_attach
+    X_PF:
+      base_frame: world
+      translation: [-0.01, -0.02, 0.0]
+      rotation: !Rpy { deg: [0.0, 0.0, 0.0] }
+
+- add_weld:
+    parent: vascular_part048_attach
+    child: vascular_partexport048::vascular_partexport048_body
+
+- add_model:
+    name: vascular_partexport049
+    file: package://PCC-IRIS/semi_vas-collections/vascular_partexport049.sdf
+
+- add_frame:
+    name: vascular_part049_attach
+    X_PF:
+      base_frame: world
+      translation: [-0.01, -0.02, 0.0]
+      rotation: !Rpy { deg: [0.0, 0.0, 0.0] }
+
+- add_weld:
+    parent: vascular_part049_attach
+    child: vascular_partexport049::vascular_partexport049_body
+
+- add_model:
+    name: vascular_partexport050
+    file: package://PCC-IRIS/semi_vas-collections/vascular_partexport050.sdf
+
+- add_frame:
+    name: vascular_part050_attach
+    X_PF:
+      base_frame: world
+      translation: [-0.01, -0.02, 0.0]
+      rotation: !Rpy { deg: [0.0, 0.0, 0.0] }
+
+- add_weld:
+    parent: vascular_part050_attach
+    child: vascular_partexport050::vascular_partexport050_body
+
+- add_model:
+    name: vascular_partexport051
+    file: package://PCC-IRIS/semi_vas-collections/vascular_partexport051.sdf
+
+- add_frame:
+    name: vascular_part051_attach
+    X_PF:
+      base_frame: world
+      translation: [-0.01, -0.02, 0.0]
+      rotation: !Rpy { deg: [0.0, 0.0, 0.0] }
+
+- add_weld:
+    parent: vascular_part051_attach
+    child: vascular_partexport051::vascular_partexport051_body
+
+- add_model:
+    name: vascular_partexport052
+    file: package://PCC-IRIS/semi_vas-collections/vascular_partexport052.sdf
+
+- add_frame:
+    name: vascular_part052_attach
+    X_PF:
+      base_frame: world
+      translation: [-0.01, -0.02, 0.0]
+      rotation: !Rpy { deg: [0.0, 0.0, 0.0] }
+
+- add_weld:
+    parent: vascular_part052_attach
+    child: vascular_partexport052::vascular_partexport052_body
+
+- add_model:
+    name: vascular_partexport053
+    file: package://PCC-IRIS/semi_vas-collections/vascular_partexport053.sdf
+
+- add_frame:
+    name: vascular_part053_attach
+    X_PF:
+      base_frame: world
+      translation: [-0.01, -0.02, 0.0]
+      rotation: !Rpy { deg: [0.0, 0.0, 0.0] }
+
+- add_weld:
+    parent: vascular_part053_attach
+    child: vascular_partexport053::vascular_partexport053_body
+
+- add_model:
+    name: vascular_partexport054
+    file: package://PCC-IRIS/semi_vas-collections/vascular_partexport054.sdf
+
+- add_frame:
+    name: vascular_part054_attach
+    X_PF:
+      base_frame: world
+      translation: [-0.01, -0.02, 0.0]
+      rotation: !Rpy { deg: [0.0, 0.0, 0.0] }
+
+- add_weld:
+    parent: vascular_part054_attach
+    child: vascular_partexport054::vascular_partexport054_body
+
+- add_model:
+    name: vascular_partexport055
+    file: package://PCC-IRIS/semi_vas-collections/vascular_partexport055.sdf
+
+- add_frame:
+    name: vascular_part055_attach
+    X_PF:
+      base_frame: world
+      translation: [-0.01, -0.02, 0.0]
+      rotation: !Rpy { deg: [0.0, 0.0, 0.0] }
+
+- add_weld:
+    parent: vascular_part055_attach
+    child: vascular_partexport055::vascular_partexport055_body
+
+- add_model:
+    name: vascular_partexport056
+    file: package://PCC-IRIS/semi_vas-collections/vascular_partexport056.sdf
+
+- add_frame:
+    name: vascular_part056_attach
+    X_PF:
+      base_frame: world
+      translation: [-0.01, -0.02, 0.0]
+      rotation: !Rpy { deg: [0.0, 0.0, 0.0] }
+
+- add_weld:
+    parent: vascular_part056_attach
+    child: vascular_partexport056::vascular_partexport056_body
+
+- add_model:
+    name: vascular_partexport057
+    file: package://PCC-IRIS/semi_vas-collections/vascular_partexport057.sdf
+
+- add_frame:
+    name: vascular_part057_attach
+    X_PF:
+      base_frame: world
+      translation: [-0.01, -0.02, 0.0]
+      rotation: !Rpy { deg: [0.0, 0.0, 0.0] }
+
+- add_weld:
+    parent: vascular_part057_attach
+    child: vascular_partexport057::vascular_partexport057_body
+
+- add_model:
+    name: vascular_partexport058
+    file: package://PCC-IRIS/semi_vas-collections/vascular_partexport058.sdf
+
+- add_frame:
+    name: vascular_part058_attach
+    X_PF:
+      base_frame: world
+      translation: [-0.01, -0.02, 0.0]
+      rotation: !Rpy { deg: [0.0, 0.0, 0.0] }
+
+- add_weld:
+    parent: vascular_part058_attach
+    child: vascular_partexport058::vascular_partexport058_body
+
+- add_model:
+    name: vascular_partexport059
+    file: package://PCC-IRIS/semi_vas-collections/vascular_partexport059.sdf
+
+- add_frame:
+    name: vascular_part059_attach
+    X_PF:
+      base_frame: world
+      translation: [-0.01, -0.02, 0.0]
+      rotation: !Rpy { deg: [0.0, 0.0, 0.0] }
+
+- add_weld:
+    parent: vascular_part059_attach
+    child: vascular_partexport059::vascular_partexport059_body
+
+- add_model:
+    name: vascular_partexport060
+    file: package://PCC-IRIS/semi_vas-collections/vascular_partexport060.sdf
+
+- add_frame:
+    name: vascular_part060_attach
+    X_PF:
+      base_frame: world
+      translation: [-0.01, -0.02, 0.0]
+      rotation: !Rpy { deg: [0.0, 0.0, 0.0] }
+
+- add_weld:
+    parent: vascular_part060_attach
+    child: vascular_partexport060::vascular_partexport060_body
+
+- add_model:
+    name: vascular_partexport061
+    file: package://PCC-IRIS/semi_vas-collections/vascular_partexport061.sdf
+
+- add_frame:
+    name: vascular_part061_attach
+    X_PF:
+      base_frame: world
+      translation: [-0.01, -0.02, 0.0]
+      rotation: !Rpy { deg: [0.0, 0.0, 0.0] }
+
+- add_weld:
+    parent: vascular_part061_attach
+    child: vascular_partexport061::vascular_partexport061_body
+
+- add_model:
+    name: vascular_partexport062
+    file: package://PCC-IRIS/semi_vas-collections/vascular_partexport062.sdf
+
+- add_frame:
+    name: vascular_part062_attach
+    X_PF:
+      base_frame: world
+      translation: [-0.01, -0.02, 0.0]
+      rotation: !Rpy { deg: [0.0, 0.0, 0.0] }
+
+- add_weld:
+    parent: vascular_part062_attach
+    child: vascular_partexport062::vascular_partexport062_body
+
+- add_model:
+    name: vascular_partexport063
+    file: package://PCC-IRIS/semi_vas-collections/vascular_partexport063.sdf
+
+- add_frame:
+    name: vascular_part063_attach
+    X_PF:
+      base_frame: world
+      translation: [-0.01, -0.02, 0.0]
+      rotation: !Rpy { deg: [0.0, 0.0, 0.0] }
+
+- add_weld:
+    parent: vascular_part063_attach
+    child: vascular_partexport063::vascular_partexport063_body
+

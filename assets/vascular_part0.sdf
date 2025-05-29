@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<sdf version="1.7">
+  <model name="vascular_part0">
+    <link name="vascular_part0_body">
+      <visual name="vascular_part0_visual">
+        <geometry>
+          <mesh>
+            <uri>vascular_part0.obj</uri>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+    <frame name="vascular_part0_center">
+      <pose relative_to="vascular_part0_body">0 0 0 0 0 0</pose>
+    </frame>
+  </model>
+</sdf>

@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<sdf version="1.7">
+  <model name="sphere8_model">
+    <link name="sphere8_base">
+      <visual name="visual">
+        <pose>0 0 0 0 0 0</pose>
+        <geometry>
+            <sphere>
+              <radius>0.008</radius>
+            </sphere>
+        </geometry>
+        <material>
+          <ambient>1 0 0 1</ambient>
+          <diffuse>1 0 0 1</diffuse>
+          <specular>1 0 0 1</specular>
+          <emissive>1 0 0 1</emissive>
+        </material>
+      </visual>
+      <!-- <collision name="sphere_colli">
+        <pose>0.0, 0.08, 0.3 0 0 0</pose>
+        <geometry>
+            <sphere>
+              <radius>0.01</radius>
+            </sphere>
+        </geometry>
+      </collision> -->
+    </link>
+    <frame name="sphere5_center">
+      <pose relative_to="sphere5_base">0 0 0 0 0 0</pose>
+    </frame>
+  </model>
+</sdf>

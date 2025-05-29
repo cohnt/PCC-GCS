@@ -1,0 +1,299 @@
+<?xml version="1.0"?>
+<robot name ="PCC">
+    <link name="base_link">
+        <visual>
+            <origin rpy="0 0 0" xyz="0.0 0.0 0.0"/>
+            <geometry>
+                <cylinder length="0.0002" radius="0.002"/>
+            </geometry>
+        </visual>
+    </link>
+    <joint name="base_joint" type="prismatic">
+        <parent link="base_link"/>
+        <child link="s1l0"/>
+        <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.001"/>
+        <axis xyz="0 0 1"/>
+        <limit effort="330.0" lower="-0.1" upper="0.5" velocity="2"/>
+        <dynamics damping="0.0" friction="0.0"/>
+    </joint>
+    <link name="s1l0">
+        <visual>
+            <origin rpy="0 0 0" xyz="0.0 0.0 0.0001"/>
+            <geometry>
+                <cylinder length="0.0002" radius="0.002"/>
+            </geometry>
+        </visual>
+        <collision>
+            <origin rpy="0 0 0" xyz="0.0 0.0 0.0001"/>
+            <geometry>
+                <cylinder length="0.0002" radius="0.002"/>
+            </geometry>
+        </collision>
+    </link>
+    <joint name="s1q0" type="revolute">
+        <parent link="s1l0"/>
+        <child link="s1l1"/>
+        <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.02"/>
+        <axis xyz="1 0 0"/>
+        <limit effort="330.0" lower="-0.5" upper="0.5" velocity="2"/>
+        <dynamics damping="0.0" friction="0.0"/>
+    </joint>
+    <link name="s1l1">
+        <visual>
+            <origin rpy="0 0 0" xyz="0.0 0.0 0.0001"/>
+            <geometry>
+                <cylinder length="0.0002" radius="0.002"/>
+            </geometry>
+        </visual>
+        <collision>
+            <origin rpy="0 0 0" xyz="0.0 0.0 0.0001"/>
+            <geometry>
+                <cylinder length="0.0002" radius="0.002"/>
+            </geometry>
+        </collision>
+    </link>
+    <joint name="s1q1" type="revolute">
+        <parent link="s1l1"/>
+        <child link="s1l2"/>
+        <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.02"/>
+        <axis xyz="1 0 0"/>
+        <limit effort="330.0" lower="-0.5" upper="0.5" velocity="2"/>
+        <dynamics damping="0.0" friction="0.0"/>
+        <mimic joint="s1q0" multiplier="2" offset="0"/>
+    </joint>
+    <link name="s1l2">
+        <visual>
+            <origin rpy="0 0 0" xyz="0.0 0.0 0.0001"/>
+            <geometry>
+                <cylinder length="0.0002" radius="0.002"/>
+            </geometry>
+        </visual>
+        <collision>
+            <origin rpy="0 0 0" xyz="0.0 0.0 0.0001"/>
+            <geometry>
+                <cylinder length="0.0002" radius="0.002"/>
+            </geometry>
+        </collision>
+    </link>
+    <joint name="s1q2" type="revolute">
+        <parent link="s1l2"/>
+        <child link="s1l3"/>
+        <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.02"/>
+        <axis xyz="1 0 0"/>
+        <limit effort="330.0" lower="-0.5" upper="0.5" velocity="2"/>
+        <dynamics damping="0.0" friction="0.0"/>
+        <mimic joint="s1q0" multiplier="2" offset="0"/>
+    </joint>
+    <link name="s1l3">
+        <visual>
+            <origin rpy="0 0 0" xyz="0.0 0.0 0.0001"/>
+            <geometry>
+                <cylinder length="0.0002" radius="0.002"/>
+            </geometry>
+        </visual>
+        <collision>
+            <origin rpy="0 0 0" xyz="0.0 0.0 0.0001"/>
+            <geometry>
+                <cylinder length="0.0002" radius="0.002"/>
+            </geometry>
+        </collision>
+    </link>
+    <joint name="s1q3" type="revolute">
+        <parent link="s1l3"/>
+        <child link="s1l4"/>
+        <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.02"/>
+        <axis xyz="1 0 0"/>
+        <limit effort="330.0" lower="-0.5" upper="0.5" velocity="2"/>
+        <dynamics damping="0.0" friction="0.0"/>
+        <mimic joint="s1q0" multiplier="2" offset="0"/>
+    </joint>
+    <link name="s1l4">
+        <visual>
+            <origin rpy="0 0 0" xyz="0.0 0.0 0.0001"/>
+            <geometry>
+                <cylinder length="0.0002" radius="0.002"/>
+            </geometry>
+        </visual>
+        <collision>
+            <origin rpy="0 0 0" xyz="0.0 0.0 0.0001"/>
+            <geometry>
+                <cylinder length="0.0002" radius="0.002"/>
+            </geometry>
+        </collision>
+    </link>
+    <joint name="s1q4" type="revolute">
+        <parent link="s1l4"/>
+        <child link="s1l5"/>
+        <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.02"/>
+        <axis xyz="1 0 0"/>
+        <limit effort="330.0" lower="-0.5" upper="0.5" velocity="2"/>
+        <dynamics damping="0.0" friction="0.0"/>
+        <mimic joint="s1q0" multiplier="2" offset="0"/>
+    </joint>
+    <link name="s1l5">
+        <visual>
+            <origin rpy="0 0 0" xyz="0.0 0.0 0.0001"/>
+            <geometry>
+                <cylinder length="0.0002" radius="0.002"/>
+            </geometry>
+        </visual>
+        <collision>
+            <origin rpy="0 0 0" xyz="0.0 0.0 0.0001"/>
+            <geometry>
+                <cylinder length="0.0002" radius="0.002"/>
+            </geometry>
+        </collision>
+    </link>
+    <joint name="s1q5" type="revolute">
+        <parent link="s1l5"/>
+        <child link="s2l0"/>
+        <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.02"/>
+        <axis xyz="1 0 0"/>
+        <limit effort="330.0" lower="-0.5" upper="0.5" velocity="2"/>
+        <dynamics damping="0.0" friction="0.0"/>
+        <mimic joint="s1q0" multiplier="2" offset="0"/>
+    </joint>
+    <link name="s2l0">
+        <visual>
+            <origin rpy="0 0 0" xyz="0.0 0.0 0.0001"/>
+            <geometry>
+                <cylinder length="0.0002" radius="0.002"/>
+            </geometry>
+        </visual>
+        <collision>
+            <origin rpy="0 0 0" xyz="0.0 0.0 0.0001"/>
+            <geometry>
+                <cylinder length="0.0002" radius="0.002"/>
+            </geometry>
+        </collision>
+    </link>
+    <joint name="s2q0" type="revolute">
+        <parent link="s2l0"/>
+        <child link="s2l1"/>
+        <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.02"/>
+        <axis xyz="1 0 0"/>
+        <limit effort="330.0" lower="-0.5" upper="0.5" velocity="2"/>
+        <dynamics damping="0.0" friction="0.0"/>
+    </joint>
+    <link name="s2l1">
+        <visual>
+            <origin rpy="0 0 0" xyz="0.0 0.0 0.0001"/>
+            <geometry>
+                <cylinder length="0.0002" radius="0.002"/>
+            </geometry>
+        </visual>
+        <collision>
+            <origin rpy="0 0 0" xyz="0.0 0.0 0.0001"/>
+            <geometry>
+                <cylinder length="0.0002" radius="0.002"/>
+            </geometry>
+        </collision>
+    </link>
+    <joint name="s2q1" type="revolute">
+        <parent link="s2l1"/>
+        <child link="s2l2"/>
+        <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.02"/>
+        <axis xyz="1 0 0"/>
+        <limit effort="330.0" lower="-0.5" upper="0.5" velocity="2"/>
+        <dynamics damping="0.0" friction="0.0"/>
+        <mimic joint="s2q0" multiplier="2" offset="0"/>
+    </joint>
+    <link name="s2l2">
+        <visual>
+            <origin rpy="0 0 0" xyz="0.0 0.0 0.0001"/>
+            <geometry>
+                <cylinder length="0.0002" radius="0.002"/>
+            </geometry>
+        </visual>
+        <collision>
+            <origin rpy="0 0 0" xyz="0.0 0.0 0.0001"/>
+            <geometry>
+                <cylinder length="0.0002" radius="0.002"/>
+            </geometry>
+        </collision>
+    </link>
+    <joint name="s2q2" type="revolute">
+        <parent link="s2l2"/>
+        <child link="s2l3"/>
+        <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.02"/>
+        <axis xyz="1 0 0"/>
+        <limit effort="330.0" lower="-0.5" upper="0.5" velocity="2"/>
+        <dynamics damping="0.0" friction="0.0"/>
+        <mimic joint="s2q0" multiplier="2" offset="0"/>
+    </joint>
+    <link name="s2l3">
+        <visual>
+            <origin rpy="0 0 0" xyz="0.0 0.0 0.0001"/>
+            <geometry>
+                <cylinder length="0.0002" radius="0.002"/>
+            </geometry>
+        </visual>
+        <collision>
+            <origin rpy="0 0 0" xyz="0.0 0.0 0.0001"/>
+            <geometry>
+                <cylinder length="0.0002" radius="0.002"/>
+            </geometry>
+        </collision>
+    </link>
+    <joint name="s2q3" type="revolute">
+        <parent link="s2l3"/>
+        <child link="s2l4"/>
+        <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.02"/>
+        <axis xyz="1 0 0"/>
+        <limit effort="330.0" lower="-0.5" upper="0.5" velocity="2"/>
+        <dynamics damping="0.0" friction="0.0"/>
+        <mimic joint="s2q0" multiplier="2" offset="0"/>
+    </joint>
+    <link name="s2l4">
+        <visual>
+            <origin rpy="0 0 0" xyz="0.0 0.0 0.0001"/>
+            <geometry>
+                <cylinder length="0.0002" radius="0.002"/>
+            </geometry>
+        </visual>
+        <collision>
+            <origin rpy="0 0 0" xyz="0.0 0.0 0.0001"/>
+            <geometry>
+                <cylinder length="0.0002" radius="0.002"/>
+            </geometry>
+        </collision>
+    </link>
+    <joint name="s2q4" type="revolute">
+        <parent link="s2l4"/>
+        <child link="s2l5"/>
+        <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.02"/>
+        <axis xyz="1 0 0"/>
+        <limit effort="330.0" lower="-0.5" upper="0.5" velocity="2"/>
+        <dynamics damping="0.0" friction="0.0"/>
+        <mimic joint="s2q0" multiplier="2" offset="0"/>
+    </joint>
+    <link name="s2l5">
+        <visual>
+            <origin rpy="0 0 0" xyz="0.0 0.0 0.0001"/>
+            <geometry>
+                <cylinder length="0.0002" radius="0.002"/>
+            </geometry>
+        </visual>
+        <collision>
+            <origin rpy="0 0 0" xyz="0.0 0.0 0.0001"/>
+            <geometry>
+                <cylinder length="0.0002" radius="0.002"/>
+            </geometry>
+        </collision>
+    </link>
+    <drake:collision_filter_group name="PCC_bodys">
+      <drake:member link="s1l0"/>
+      <drake:member link="s1l1"/>
+      <drake:member link="s1l2"/>
+      <drake:member link="s1l3"/>
+      <drake:member link="s1l4"/>
+      <drake:member link="s1l5"/>
+      <drake:member link="s2l0"/>
+      <drake:member link="s2l1"/>
+      <drake:member link="s2l2"/>
+      <drake:member link="s2l3"/>
+      <drake:member link="s2l4"/>
+      <drake:member link="s2l5"/>
+      <drake:ignored_collision_filter_group name="PCC_bodys"/>
+    </drake:collision_filter_group>
+</robot>

@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<sdf version="1.7">
+  <model name="obj_name">
+    <link name="obj_name_body">
+      <visual name="obj_name_visual">
+        <geometry>
+          <mesh>
+            <uri>obj_name.obj</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <collision name="obj_name_collision">
+        <geometry>
+          <mesh>
+            <uri>obj_name.obj</uri>
+          </mesh>
+        </geometry>
+      </collision>
+    </link>
+    <frame name="obj_name_center">
+      <pose relative_to="obj_name_body">0 0 0 0 0 0</pose>
+    </frame>
+  </model>
+</sdf>
