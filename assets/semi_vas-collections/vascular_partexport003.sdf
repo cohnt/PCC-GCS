@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<sdf version="1.7">
+  <model name="vascular_partexport003">
+    <link name="vascular_partexport003_body">
+      <visual name="vascular_partexport003_visual">
+        <geometry>
+          <mesh>
+            <uri>vascular_partexport003.obj</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <collision name="vascular_partexport003_collision">
+        <geometry>
+          <mesh>
+            <uri>vascular_partexport003.obj</uri>
+          </mesh>
+        </geometry>
+      </collision>
+    </link>
+    <frame name="vascular_partexport003_center">
+      <pose relative_to="vascular_partexport003_body">0 0 0 0 0 0</pose>
+    </frame>
+  </model>
+</sdf>
